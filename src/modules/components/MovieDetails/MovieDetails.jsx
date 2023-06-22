@@ -16,7 +16,7 @@ export default function MovieDetails() {
       .then(response => setMovie(response))
       .catch(err => console.error(err))
       .finally(() => setIsLoading(false));
-  });
+  }, [movie, movieId]);
 
   return (
     <main>
