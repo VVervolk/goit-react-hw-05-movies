@@ -10,7 +10,6 @@ export default function Home() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    console.log('1');
     fetchAPI('trending/all/day')
       .then(response => setMovies(response.results))
       .catch(err => console.error(err));
