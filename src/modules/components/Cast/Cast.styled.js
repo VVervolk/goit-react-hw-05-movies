@@ -9,7 +9,7 @@ export const CastList = styled.ul`
 
 export const CastItem = styled.li`
   flex-basis: calc((100% - (7 * 20px)) / 8);
-  min-height: 190px;
+  min-height: 300px;
 `;
 
 export const CastImage = styled.img`
