@@ -1,12 +1,18 @@
+import { Box, Name } from './Item.styled';
+
 export default function Item({ options }) {
   const { name, title, poster_path } = options;
   return (
-    <li>
+    <Box>
       <img
-        src={`https://image.tmdb.org/t/p/w300${poster_path}`}
+        src={
+          poster_path
+            ? `https://image.tmdb.org/t/p/w500${poster_path}`
+            : 'https://i.imgur.com/Z2MYNbj.png'
+        }
         alt={title || name}
       />
-      <p>{title || name}</p>
-    </li>
+      <Name>{title || name}</Name>
+    </Box>
   );
 }
